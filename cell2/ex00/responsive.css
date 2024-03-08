@@ -1,0 +1,17 @@
+table {
+width: 100%; height: 100vh;
+}
+h2 {
+    color: rgb(212, 118, 24);
+}
+h1 {
+    color:cornflowerblue;
+}
+.izq {
+    background-color: rgb(217, 125, 26);
+    padding-left: 50px;
+}
+.der{
+    background-color: cornflowerblue;
+    padding-left: 50px;
+}

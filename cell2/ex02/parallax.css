@@ -1,0 +1,31 @@
+.be, .life, .everyday {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   align-items: center;
+   justify-content: center;
+   color: antiquewhite;
+   font-size:30px
+  
+}
+
+.be {
+   background-image: url(/Users/rmessina/discovery_piscine/cell2/ex02/imagen1.jpg);
+ align-content: center;
+ 
+}
+
+.life {
+background-color: black;
+    
+}
+
+.everyday {
+background-image: url(/Users/rmessina/discovery_piscine/cell2/ex02/imagen2.jpg);
+
+}
