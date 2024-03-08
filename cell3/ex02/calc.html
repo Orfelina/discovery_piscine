@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: calc(100vh - 200px);
+    align-items: center;
+    background-color: rgb(5, 5, 5);
+   
+}
+
+input[type="text"], select, input[type="submit"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #0e843f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #ca12ab;
+}
+</style>
+<body>
+    <form id="calculatorForm">
+        <input type="text" id="leftOperand" placeholder="Primer número" required>
+        <select id="operator" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="rightOperand" placeholder="Segundo número" required>
+        <input type="submit" value="Try me!">
+    </form>
+    <script>
+        document.getElementById('calculatorForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let leftOperand = parseInt(document.getElementById('leftOperand').value);
+    let operator = document.getElementById('operator').value;
+    let rightOperand = parseInt(document.getElementById('rightOperand').value);
+
+    if (isNaN(leftOperand) || isNaN(rightOperand) || leftOperand < 0 || rightOperand < 0) {
+        alert('Error :(');
+        console.log('Error :(');
+        return;
+    }
+
+    let result;
+    switch (operator) {
+        case '+':
+            result = leftOperand + rightOperand;
+            break;
+        case '-':
+            result = leftOperand - rightOperand;
+            break;
+        case '*':
+            result = leftOperand * rightOperand;
+            break;
+        case '/':
+            if (rightOperand === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+            result = leftOperand / rightOperand;
+            break;
+        case '%':
+            if (rightOperand === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+            result = leftOperand % rightOperand;
+            break;
+        default:
+            alert('Operador inválido');
+            console.log('Operador inválido');
+            return;
+    }
+
+    alert('El resultado es: ' + result);
+    console.log('El resultado es: ' + result);
+});
+    </script>
+
+</body>
+</html>

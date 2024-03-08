@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boton color</title>
+<link rel="stylesheet" href="backgroound.css"/>
+</head>
+<body>
+<button class="boton" id="colorButton">Cambiar Color</button>
+
+<script>
+    // Función para generar un color aleatorio en formato hexadecimal
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Event listener para el botón
+    document.getElementById('colorButton').addEventListener('click', function() {
+        var randomColor = getRandomColor();
+        document.body.style.backgroundColor = randomColor; // Cambia el color de fondo del cuerpo de la página
+    });
+</script>
+
+</body>
+</html>

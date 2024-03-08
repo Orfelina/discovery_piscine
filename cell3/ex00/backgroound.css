@@ -1,0 +1,19 @@
+  body {
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* Establece la altura de la página al 100% del viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0; /* Color de fondo inicial */
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 26px;
+        background-color: #a7aaad;
+        color: #080808;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    
